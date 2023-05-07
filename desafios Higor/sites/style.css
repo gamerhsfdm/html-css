@@ -1,0 +1,290 @@
+@charset "UTF-8";
+ /*
+barra de rolagem tipo um formulario  
+
+ *{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ }
+
+.scroll::-webkit-scrollbar{
+   width: 15px; 
+   border: 1px solid rgb(200,200,200)
+}
+ 
+.scroll::-webkit-scrollbar-thumb{
+    background-color: gold;
+}
+
+.scroll{
+    width: 450px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 2%;
+    overflow-y: scroll;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.3);
+}
+
+.box{
+    
+    width: 100%;
+    height: 70px;
+    background-color: #ccc;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+*/
+    /* menu fixado 
+body{
+    margin: 0;
+    box-sizing: border-box;
+    height: 5000px;
+}
+
+nav{
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+nav .logo{
+    color: #fff;
+    float: left;
+    display: block;
+    padding: 14px 16px;
+}
+
+nav a{
+    color: #fff;
+    float: right;
+    text-decoration: none;
+    display: block;
+    padding: 14px 16px;
+}
+
+nav a:hover{
+    transition: 0,5s;
+    background-color: #e4e4e4;
+    color: #333;
+}
+*/
+
+
+/* barra de rolagem
+body{ 
+    background-color: #0b0c22;
+    padding: 0;
+    margin: 0;
+    height: 5000px;
+}
+::-webkit-scrollbar{
+    width: 25px;
+
+}
+::-webkit-scrollbar-track{
+ border: 7px solid #232943;   
+ box-shadow: inset 0 0 2.5px 2px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(45deg, #06dee1,#79ff6c);
+    border-radius: 3px;
+}
+*/
+
+/*
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f9f9f9;
+}
+#check{
+    display: none;
+}
+#icone{
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+.barra{
+    background-color: #333;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    transition: all .2s linear;
+    left:-300px;
+}
+nav{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+nav a{
+    text-decoration: none;
+    
+}
+.link{
+    background-color: #494950;
+    padding: 20px;
+    font-family: "Arial";
+    font-size: 12pt;
+    transition: all .2s linear;
+    color: #f4f4f9;
+    border-bottom: 2px solid #222;
+    opacity: 0;
+    margin-top: 200px;
+}
+
+
+.link:hover{
+    background-color: #050542;
+}
+
+#check:checked ~ .barra{
+ transform: translateX(300px);
+}
+
+#check:checked ~ .barra nav a .link{
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: .2s;
+   }
+   */
+   /* menu vertical
+:root{
+       --cor-principal: rgb(46, 62, 77);
+       --cor-secundaria: rgb(222, 228, 235);
+}
+nav{
+    max-width: 350px;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li{
+    background-color: var(--cor-principal);
+}
+
+nav ul li{
+   border-bottom: 1px solid var(--cor-secundaria);;
+}
+
+nav ul li a{
+    background-color: var(--cor-principal);
+    color: #fff;
+    padding: 10px;
+    display:block;
+    text-decoration: none;
+    transition: background .3s;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+}
+*/
+/*
+ menu  horizontal
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+text-decoration: none; 
+font-size: 20px;
+}
+ul{
+    background: orange;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 600px;
+}
+li{
+    color: white;
+    background: orange;
+    display: block;
+    float: left;
+    padding: 18px;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    font-style: italic;
+    font-size: 20px;
+}
+li a{
+    color: white;
+}
+li:hover {
+    background: blue;
+    cursor: pointer;
+}
+ul li ul {
+    background: orange;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 18px;
+    left: 0;
+    display: none;
+}
+ul li:hover > ul, ul li  ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+ul li ul li {
+    clear: both;
+    width: 100%;
+}
+*/
+.menu ul li{
+    background-color: #6da3f9;
+    color: white;
+    float: left;
+    width: 200px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    position: relative;
+}
+.menu ul li:hover{
+  background-color: #2c69cc;  
+}
+.menu ul{
+    padding: 0;
+
+}
+.menu ul ul{
+    display: none;
+}
+.menu ul li:hover > ul{
+ display: block;
+}
+.menu ul ul ul{
+    margin-left: 200px;
+    top: 0px;
+    position: absolute;
+}
+.menu ul ul li:hover{
+    background-color: #144aa0;
+}
+.menu ul ul ul li:hover{
+   background-color: #062a66; 
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <style>
+        .menu ul li{
+         background-color: #6da3f9;
+         color: white;
+         float: left;
+         width: 200px;
+         height: 40px;
+         display: inline-block;
+         text-align: center;
+         line-height: 40px;
+         font-size: 25px;
+         position: relative;
+        }
+        .menu ul li:hover{
+            background-color: #2c69cc;
+        }
+        .menu ul{
+            padding: 0;
+        }
+        .menu ul ul{
+     display: none;
+        }
+        .menu ul li:hover > ul{
+           display: block;
+        }
+        .menu ul ul ul{
+           margin-left: 200px; 
+           top: 0px;
+           position: absolute;
+        }
+        .menu ul ul li:hover{
+           background-color: yellow;
+        }
+        .menu ul ul ul li:hover{
+            background-color: violet;
+        }
+        .menu a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <ul>
+            <li><a href="Argentina.html">Argentina</a>
+                <ul>
+                    <li>Norte</li>
+                    <li>Sul
+                        <ul>
+                            <li>teste</li>
+                            <li>teste</li>
+                            <li>teste</li>
+                            <li>teste
+                                <ul>
+                                    <li>teste</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Sudeste</li>
+                </ul>
+            </li>
+            <li>Brasil</li>
+            <li>Colombia</li>
+            <li>Paraguai</li>
+        </ul>
+    </nav>
+</body>
+</html>

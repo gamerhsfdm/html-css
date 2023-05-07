@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+}
+header{
+width: 100%;
+height: 65px;
+top: 0;
+left: 0;
+background-color: #5b859a;
+position: fixed;
+
+}
+.menu-icon{
+   position: fixed;
+   font-size: 25px;
+   font-weight: bold;
+   padding: 5px;
+   width: 40px;
+   height: 40px;
+   text-align: center;
+   background-color: #5b859a;
+   color: #fff;
+   cursor: pointer;
+   transition: all .4s;
+   left: 300px;
+}
+.menu-icon:hover{
+background-color: #fff;
+color: #5b859a;
+}
+
+#chk{
+   position: absolute;
+}
+.menu{
+height: 100%;
+position: fixed;
+background-color: #222;
+top: 0;
+overflow: hidden;
+transition: all .2s;
+}
+#principal{
+width: 300px;
+left: -300px;
+}
+ul{
+list-style: none;
+}
+ul li a{
+display: block;
+font-size: 18px;
+font-family: 'Arial';
+padding: 10px;
+border-bottom:  solid 1px #000;
+color: #ccc;
+text-decoration: none;
+transition: all .2s;
+}
+ul li span{
+ float: right;
+ padding-left: 10px;
+}
+ul li a:hover{
+background-color: #5b859a;
+}
+.voltar{
+   margin-top: 60px;
+   background-color: #111;
+   border-left: solid 5px #444;
+}
+.bg{
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+position: fixed;
+background-color: rgba(0,0,0,.6);
+display: none;
+}
+#chk:checked ~.bg{
+  display: block;
+}
+#chk:checked ~ #principal{
+  transform: translateX(300px)
+}
+#paginas,
+#forum,
+#cursos,
+#sobre,
+#contato{
+  width: 250px;
+  left: -250px;
+}
+#paginas:target,
+#forum:target,
+#cursos:target,
+#sobre:target,
+#contato:target{
+   transform: translateX(250px);
+}
+       input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #5b8;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  left: 1240px;
+  position: relative;
+
+  align-items: center;
+  margin-right: 10px;
+}
+
+.login {
+  background-color: greenyellow;
+  left: 0px;
+
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  position: relative;
+  left: 10px;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header></header>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="menu-icon">&#9776;</label>
+
+    <div class="bg"></div>
+
+    <nav class="menu" id="principal">
+        <ul>
+            <li><a href="" class="voltar">Voltar</a></li>
+            <li><a href="#paginas">Paginas <span>+</span></a></li>
+            <li><a href="#forum">Forúm <span>+</span></a></li>
+            <li><a href="#cursos">Cursos <span>+</span></a></li>
+            <li><a href="#sobre">Sobre <span>+</span></a></li>
+            <li><a href="#contato">Contato <span>+</span></a></li>
+        </ul>
+    </nav>
+
+    <nav class="menu" id="paginas">
+        <ul>
+            <li><a href="#" class="voltar">Voltar</a></li>
+            <li><a href="index.html" target="_blank" rel="-self">Pagina 1</a></li>
+            <li><a href="index1.html"target="_blank" rel="-self">Pagina 2</a></li>
+            <li><a href="index2.html"target="_blank" rel="-self">Pagina 3</a></li>
+            <li><a href="terceirapagina.html"target="_blank" rel="-self">Pagina 4</a></li>
+            <li><a href="teste.html"target="_blank" rel="-self">Pagina 5</a></li>
+            <li><a href="pag6.html"target="_blank" rel="-self">Pagina 6</a></li>
+            <li><a href="index7.html"target="_blank" rel="-self">Pagina 7</a></li>
+            <li><a href="pag8.html"target="_blank" rel="-self">Pagina 8</a></li>
+        </ul>
+    </nav>
+
+    <nav class="menu" id="forum">
+        <ul>
+            <li><a href="#" class="voltar">Voltar</a></li>
+            <li><a href="#">Teste</a></li>
+            <li><a href="#">teste</a></li>
+            <li><a href="#">teste</a></li>
+            <li><a href="#">teste</a></li>
+            <li><a href="#">teste</a></li>
+        </ul>
+    </nav>
+
+    <nav class="menu" id="cursos">
+        <ul>
+            <li><a href="#" class="voltar">Voltar</a></li>
+            <li><a href="#">Curso de html</a></li>
+            <li><a href="#">Curso de css</a></li>
+            <li><a href="#">Curso de javascript</a></li>
+            <li><a href="#">Curso de PHP</a></li>
+            <li><a href="#">Curso de Cubos</a></li>
+        </ul>
+    </nav>
+
+    <nav class="menu" id="sobre">
+        <ul>
+            <li><a href="#" class="voltar">Voltar</a></li>
+            <li><a href="#">Teste</a></li>
+            <li><a href="#">teste</a></li>
+            <li><a href="#">teste</a></li>
+            <li><a href="#">teste</a></li>
+            <li><a href="#">teste</a></li>
+        </ul>
+    </nav>
+
+    <nav class="menu" id="contato">
+        <ul>
+            <li><a href="#" class="voltar">Voltar</a></li>
+            <li><a href="#">Teste</a></li>
+            <li><a href="#">teste</a></li>
+            <li><a href="#">teste</a></li>
+            <li><a href="#">teste</a></li>
+            <li><a href="#">teste</a></li>
+        </ul>
+    </nav>
+
+
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; align-items: right;">Cadastre-se</button>
+
+    <div id="id01" class="modal">
+      
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+    
+        <div class="container">
+          <label for="uname"><b>Usuario</b></label>
+          <input type="text" placeholder="Insira nome de usuario" name="uname" required>
+    
+          <label for="psw"><b>Senha</b></label>
+          <input type="password" placeholder="Digite a Senha" name="psw" required>
+            
+          <button class="login" type="submit">Fazer Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Relembrar me
+          </label>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+          <span class="psw">Esqueceu a  <a href="#">Senha?</a></span>
+        </div>
+      </form>
+    </div>
+    
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+
+ 
+
+
+
+</body>
+</html>

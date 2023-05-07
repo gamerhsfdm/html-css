@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Neon</title>
+    <style>
+
+        body{
+         background: black;
+        }
+        /* Estilo do botão */ 
+
+        .neon{
+            font-size: 64px;
+            font-weight: 700px;
+            text-decoration: none;
+            display: inline-block;
+            color: #f1b;
+            padding: 8px 32px;
+            border: #f1b 8px solid;
+            border-radius: 16px;   
+
+            box-shadow: inset 0 0 32px 0 #f1b, 0 0 32px 0 #f1b;
+            text-shadow: 0 0 8px hsl(0 0% 100% / 0.3), 0 0 32px;
+
+            position: relative;
+        }
+
+        /* Reflexo do botão */
+        .neon::before{
+                content: "";
+                position: absolute;
+                top: 120%;
+                left: 0;
+
+                background: #f1b;
+                width: 100%;
+                height: 100%;
+                transform: perspective(64px) rotate(40deg) scale(1, 0.35); 
+                filter: blur(64px);
+                opacity: 0.7;
+                pointer-events: none;          
+        }
+
+             .neon::after{
+                 content: "";
+                 position: absolute;
+                 top: 0;
+                 bottom: 0;
+                 left: 0;
+                 right: 0;
+                 box-shadow: 0 0 128px 32px #f1b;
+                 opacity: 0;
+                 background-color: #f1b;    
+                 z-index: -1;
+                 transition: opacity 100ms linear;
+             }
+
+             .neon:hover::before, .neon:hover::after{
+                 opacity: 1;
+             }
+
+             .neon:hover{
+                 color: #31202b;
+                 text-shadow: none;
+             }
+    </style>
+</head>
+<body>
+    <a href="#" class="neon">Neon</a>
+</body>
+</html>

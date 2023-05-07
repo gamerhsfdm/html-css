@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+body {
+    height: 100vh;
+    background: greenyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+h1 {
+    font-style: italic;
+    color: white;
+}
+
