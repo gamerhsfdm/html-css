@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:whgt@300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 0; 
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,25 +15,25 @@ body{
     background: #23242a;
 }
 
-.box {
+.box{
     position: relative;
     width: 380px;
     height: 420px;
-    background: #1c1c1c;
+    background: #1c1c1c;    
     border-radius: 8px;
     overflow: hidden;
 }
 
-.box:before {
+.box::before {
     content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent, transparent,#45f3ff,#45f3ff,#45f3ff);
-    z-index: 1;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
     transform-origin: bottom right;
+    z-index: 1;
     animation: animate 6s linear infinite;
 }
 
@@ -44,9 +44,9 @@ body{
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent, transparent,#45f3ff,#45f3ff,#45f3ff);
-    z-index: 1;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
     transform-origin: bottom right;
+    z-index: 1;
     animation: animate 6s linear infinite;
     animation-delay: -3s;
 }
@@ -57,36 +57,35 @@ body{
     inset: 0;
 }
 
-borderLine::before {
+.borderLine::before {
     content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent, transparent,#ff2770,#ff2770,#ff2770);
-    z-index: 1;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
     transform-origin: bottom right;
+    z-index: 1;
     animation: animate 6s linear infinite;
     animation-delay: -1.5s;
 }
 
-borderLine::after {
+.borderLine::after {
     content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent, transparent,#ff2770,#ff2770,#ff2770);
-    z-index: 1;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
     transform-origin: bottom right;
+    z-index: 1;
     animation: animate 6s linear infinite;
     animation-delay: -4.5s;
 }
 
-
-@keyframes animate{
+@keyframes animate {
     0%
     {
         transform: rotate(0deg);
@@ -108,7 +107,7 @@ borderLine::after {
     flex-direction: column;
 }
 
-.box form h2{
+.box form h2 {
     color: #fff;
     font-weight: 500;
     text-align: center;
@@ -148,10 +147,10 @@ borderLine::after {
 }
 
 .box form .inputBox input:valid ~ span,
-.box form .inputBox input:focus ~ span{
+.box form .inputBox input:focus ~ span {
     color: #fff;
     font-size: 0.75em;
-    transform: translate(-34px);
+    transform: translateY(-34px);
 }
 
 .box form .inputBox i {
@@ -167,14 +166,14 @@ borderLine::after {
     pointer-events: none;
 }
 
-.box form .inputBox input:valid ~ i, 
+.box form .inputBox input:valid ~ i,
 .box form .inputBox input:focus ~ i {
-    height: 44px;
+        height: 44px;
 }
 
 .box form .links {
-  display: flex;
-  justify-self: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .box form .links a {
@@ -186,7 +185,7 @@ borderLine::after {
 
 .box form .links a:hover,
 .box form .links a:nth-child(2) {
-  color: #fff
+    color: #fff;
 }
 
 .box form input[type="submit"] {
@@ -202,6 +201,6 @@ borderLine::after {
     margin-top: 10px;
 }
 
-.box form input[type="submit"]:active {
+.box form input[type="submit"]:active{
     opacity: 0.8;
 }
