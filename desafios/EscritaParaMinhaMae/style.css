@@ -18,7 +18,7 @@ body {
     border-right: 2px solid rgba(255, 255, 255, .75);
     color: rgba(255,255,255, 0.75);
     font-family: 'Special Elite', monospace;
-    font-size: 1.5em;
+    font-size: 3em;
     text-align: center;
     margin: 0 auto;
     white-space: nowrap;
@@ -26,8 +26,8 @@ body {
 }
 
 .typing-animation {
-    animation: blinkCursor 500ms steps(40) infinite normal, 
-    typing 4s steps(40) 1s normal both;
+    animation: blinkCursor 500ms steps(80) infinite normal, 
+    typing 4s steps(80) 1s normal both;
 }
 
 @keyframes typing {
