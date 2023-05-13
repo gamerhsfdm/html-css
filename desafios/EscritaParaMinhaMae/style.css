@@ -23,11 +23,13 @@ body {
     margin: 0 auto;
     white-space: nowrap;
     overflow: hidden;
+    vertical-align: center;
+    align-items: center;
 }
 
 .typing-animation {
     animation: blinkCursor 500ms steps(80) infinite normal, 
-    typing 4s steps(80) 1s normal both;
+    typing 6s steps(80) 2s normal both;
 }
 
 @keyframes typing {
