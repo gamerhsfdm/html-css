@@ -23,8 +23,6 @@ body {
     margin: 0 auto;
     white-space: nowrap;
     overflow: hidden;
-    vertical-align: center;
-    align-items: center;
 }
 
 .typing-animation {
