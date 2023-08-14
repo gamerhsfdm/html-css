@@ -45,5 +45,14 @@ main{
 footer p{
    text-align: center;
    display: block;
-   color: rgb(0, 0, 0);
+   color: black;
+}
+
+.Enviado {
+    padding: 20px;
+    background-color: blueviolet;
+    border: none;
+    border-radius:  2px 2px 2px 2px;
+    size: 20px;
+    color: white;
 }
