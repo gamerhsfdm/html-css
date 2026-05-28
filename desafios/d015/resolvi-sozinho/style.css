@@ -1,0 +1,32 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(8, 100px);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+.topo{
+    background-color: aqua;
+    grid-area: 1 / 1 / 2 / 5;
+}
+.menu{
+    background-color: aquamarine;
+    grid-area: 2 / 1 / 2 / 5;
+}
+.principal{
+    background-color:  coral;
+    grid-area: 3 / 1 / 8 / 4;
+}
+.secundario{
+    background-color: cadetblue;
+    grid-area: 3 / 4 / 8 / 4;
+}
+.rodape{
+    background-color: chocolate;
+    grid-area: 8 / 1 / 8 / 5;
+}
